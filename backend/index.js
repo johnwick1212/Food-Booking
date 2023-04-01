@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 5000
+const port = 5000 || process.env.PORT
 require('dotenv').config()
 const mongoDB = require('./db')
 mongoDB()
