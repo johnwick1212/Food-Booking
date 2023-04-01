@@ -11,60 +11,59 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+                             Food Booking Application 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+AIM
+The aim of this project was to make a fully-fledged food booking web application using MERN Stack.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+TECH/STACK Used
+ 
+	Node.js
+	Bootstrap
+	Mongo DB
+	JavaScript
+	Express
+	React.js
+	Mongoose
+	JWT
+	Bcrypt
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+                                                           FRONTEND	 
+So, in this project, first I made the frontend part not all of it at first but yeah most of the part like navbar, carousel, main content's data is coming from the mongo DB database and last part was footer.
 
-### `npm run eject`
+In frontend there are main two folders - public and src, Within the src there are two folders - Components and Screens
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Components - this contains the react components which can be used more than once with different parameters but looks are same. These are - 
+   - Cards.js
+   - Footer.js
+   - Navbar.js
+   - ContextReducer.js (this is used for managing state with the help of useContext and useReducer)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Screens – This folder contain the react code parts which turns to be a screen of the Web App and it contains – 
+-	Cart.js (This is a pop-up window which will show the current items in the cart)
+-	Login.js (Login page)
+-	Home.js (Home page)
+-	MyOrder.js (There is a button to show all orders of a user and MyOrder is that page)
+-	SignUp.js (Sign Up page)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+                                                         BACKEND
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+So, the backend contains all the food Item data and when needed all the data is being fetched from Mongo DB Server.
 
-## Learn More
+First, we set up the server using mongo DB Atlas and linked it to with our project using mongoose.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Backend folder contains Two extra folders and some files which are – 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-	Index.js (This is the main file and there are routes added to this file which can be access by the user)
+-	Db.js (This file is responsible for fetching the data from server and assigning it to global variable so that it can be used anywhere in the project)
+-	Models (This is the folder which contains the schema which we need) 
+-	    - Orders.js (This is a Schema for storing order associated with particular email)
+-	    -User.js (This is a Schema used for storing user data)
+-	Routes (This is the folder which contain different files which has different routes declaration)
+-	    - CreateUser.js (This file contains the routes for creating a user and logging a user)
+-	    - DisplayData.js (This file contains the route for sending the needed data to display)
+-	    - OrderData.js (This file contains two routes, one is for showing the overall order of a user and other is for updating the user’s order data on server). 
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
